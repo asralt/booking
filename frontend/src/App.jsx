@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import {Routes,Route,Navigate} from "react-router-dom"
+import HomePage from './pages/HomePage';
+import AppRoutes from './components/AppRoutes';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#CABAC8]">
-      <Navbar /> {/* Include the Navbar component */}
-      <div className="flex justify-center items-center h-screen">
-        <h1 className="text-3xl font-bold text-gray-900">Welcome to the Booking Website</h1>
+    <div>
+      <Navbar/>
+        {/* <AppRoutes/> */}
       </div>
-    </div>
   );
 };
 
