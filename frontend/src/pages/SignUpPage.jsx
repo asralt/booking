@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"
 
 const SignUpPage = () => {
   return (
@@ -51,6 +52,11 @@ const SignUpPage = () => {
           <div className='mx-auto w-1/2'>
             login
           </div>
+          <div className-="mt-8 text-sm"> 
+                <Link to='/login' className='text-primary hover:underline'>
+                    Login
+                </Link>
+            </div>
         </div>
       </div>
     </div>
