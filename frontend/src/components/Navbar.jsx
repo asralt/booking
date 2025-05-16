@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
     console.log("I am supposed to be doing something");
     setSearchQuery(e.target.value);
   };
