@@ -33,5 +33,11 @@ const createBooking = async (req,res )=>{
     }
 };
 
-const cancelBooking = async (req,res )=>{}
+const cancelBooking = async (req,res )=>{
+    try{
+        const bookingId = req.params.id;
+        const deleted = await Booking.findOneAndDelete({_id:bookingId,user:req.user.id});
+        if(!deleted)return res.status(404).json({message:"Booking not found or authorized"});
+    }catch(err){}
+}
 const getBooking = async (req,res )=>{}
